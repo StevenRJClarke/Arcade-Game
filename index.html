@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Effective JavaScript: Frogger</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+</head>
+<body>
+
+  <div id="start-screen" class="modal start-screen hide">
+    <h1>Welcome the the Game</h1>
+
+    <p>To win the game, the character must cross to the water without hitting any bugs! Collect as many items as possible. The more items you collect, the more points you have. Get hit 3 times and you're out!</p>
+
+    <img src="images/game-screen.png">
+
+    <div class="keys">
+      <p>Use the following keys to move the player:</p>
+
+      <p><div class="key">&uarr;</div> Up</p>
+
+      <p><div class="key">&darr;</div> Down</p>
+
+      <p><div class="key">&larr;</div> Left</p>
+
+      <p><div class="key">&rarr;</div> Right</p>
+    </div>
+
+    <button id="next-button" class="next-button">Next</button>
+  </div>
+
+  <div id="select-screen" class="modal select-screen hide">
+    <h1>Choose you Character and the Difficulty!</h1>
+
+    <h2>Choose your Character</h2>
+
+    <div class="character-list">
+      <div class="character char-boy">
+        <img src="images/char-boy.png">
+
+        <h3>Boy</h3>
+      </div>
+
+      <div class="character char-cat-girl">
+        <img src="images/char-cat-girl.png">
+
+        <h3>Cat Girl</h3>
+      </div>
+
+      <div class="character char-horn-girl">
+        <img src="images/char-horn-girl.png">
+
+        <h3>Horn Girl</h3>
+      </div>
+
+      <div class="character char-pink-girl">
+        <img src="images/char-pink-girl.png">
+
+        <h3>Pink Girl</h3>
+      </div>
+
+      <div class="character char-princess-girl">
+        <img src="images/char-princess-girl.png">
+
+        <h3>Princess Girl</h3>
+      </div>
+    </div>
+
+    <h2>Choose the Difficulty</h2>
+
+    <div class="difficulty-list">
+      <div class="difficulty easy">
+        <h3>Easy</h3>
+
+        <img src="images/easy-bugs.png">
+      </div>
+
+      <div class="difficulty medium">
+        <h3>Medium</h3>
+
+        <img src="images/medium-bugs.png">
+      </div>
+
+      <div class="difficulty hard">
+        <h3>Hard</h3>
+
+        <img src="images/hard-bugs.png">
+      </div>
+    </div>
+
+    <button id="start-button" class="start-button blank">Start Game</button>
+  </div>
+
+  <div id="win" class="modal hide">
+    <h1>Congratulations! You have won the game.</h1>
+
+    <button id="win-button" class="button">
+      Play Again
+    </button>
+  </div>
+
+  <div id="lose" class="modal hide">
+    <h1>Oh dear! You have lost the game.</h1>
+
+    <p>Avoid the bugs and make your way to the water to win the game.</p>
+
+    <button id="lose-button" class="button">
+      Play Again
+    </button>
+  </div>
+
+  <div class="info-container">
+    <div id="info" class="info">
+      <div class="score">
+        <p><strong>Score:</strong> <span class="score-icon"></span></p>
+      </div>
+      <div class="lives">
+        <p><strong>Lives:</strong> <span class="lives-icon"></span></p>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/resources.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/engine.js"></script>
+</body>
+</html>
